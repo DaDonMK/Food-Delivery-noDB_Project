@@ -1,53 +1,58 @@
 [
     {
         "id": 1,
-        "name": "small burger",
-        "price": 3.00,
-        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
+        "name": "BEYOND MEAT BURGER",
+        "price": 6.45,
+        "img":"https://www.thespruceeats.com/thmb/KAgMssHoQUmx30uuYL_FTahXA0A=/2048x1360/filters:fill(auto,1)/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg"
     },
     {
         "id": 2,
-        "name": "medium burger",
+        "name": "3 OUNCE BURGER",
         "price": 4.25,
-        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
+        "img":"https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg"
 
     },
     {
         "id": 3,
-        "name": "large burger",
+        "name": "5 OUNCE BURGER",
         "price": 5.00,
-        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
+        "img":"https://media-cdn.tripadvisor.com/media/photo-s/11/77/d2/17/big-big-burger.jpg"
 
     },
     {
         "id": 4,
-        "name":"medium drink",
+        "name":"WATER",
         "price": 1.45,
-        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
+        "img":"https://www.bigbasket.com/media/uploads/p/l/265894_7-aquafina-packaged-drinking-water.jpg"
     },
     {
         "id": 5,
-        "name":"large drink",
-        "price": 2.00
+        "name":"LARGE DRINK",
+        "price": 2.00,
+        "img":"https://www.cfacdn.com/img/order/COM/Menu_Refresh/Drinks/Drinks%20PDP/_0000s_0022_Feed_Menu_0000_Drinks_Coca-cola.png"
     },
     {
         "id": 6,
-        "name":"xl drink",
-        "price": 2.45
+        "name":"XL DRINK",
+        "price": 2.45,
+        "img":"https://thecord.ca/wp-content/uploads/2013/01/Opinion-Fat-Cola-Steph.jpg"
     },
     {
         "id": 7,
-        "name":"small fries",
-        "price": 2.00
+        "name":"CHEESE FRIES",
+        "price": 3.99,
+        "img": "https://static.toiimg.com/thumb/55332663.cms?width=1200&height=900"
     },
     {
         "id": 8,
-        "name":"medium fries",
-        "price": 3.00
+        "name":"WAFFLE FRIES",
+        "price": 2.99,
+        "img": "https://cdnimg.webstaurantstore.com/images/products/large/430406/1614139.jpg"
     },
     {
         "id": 9,
-        "name":"large fries",
-        "price": 4.00
+        "name":"GARLIC FRIES",
+        "price": 4.00,
+        "img": "https://i.pinimg.com/originals/00/f5/09/00f509056582523a5945fa27c6b4f618.jpg"
     }
 ]
