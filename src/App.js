@@ -10,7 +10,8 @@ class App extends Component {
     super()
 
     this.state = {
-      cart : [],
+      allFood : [],
+      cart: []
     }
     this.foodInCart = this.foodInCart.bind(this)
   }
@@ -18,8 +19,8 @@ class App extends Component {
   componentDidMount(){
     axios.get('/api/foods')
     .then(response =>{
-      this.setState({cart: response.data})
-      // console.log(response)
+      this.setState({allFood: response.data})
+      console.log(this.state.cart)
     })
     .catch(err => console.log(err + ' inCart'))
   }
@@ -27,11 +28,10 @@ class App extends Component {
   foodInCart(sendElementToCart){
     axios.post('/api/cart',{name: sendElementToCart})
     .then(response =>{
-      // console.log(response.data)
+      console.log(response.data)
       this.setState({cart: response.data})
       console.log(this.state.cart)
-      console.log(this.state.cart[1].name.price)
-
+      // console.log(this.state.cart[1].name.price)
     })
     .catch(err => console.log(err + 'inSendToCart'))
   }
@@ -40,7 +40,7 @@ class App extends Component {
     axios.delete(`/api/cart/${id}`)
     .then(response =>{
       this.setState({cart: response.data})
-      // console.log(this.state.cart)
+      console.log(this.state.cart)
     })
     .catch(err => console.log(err + ' inClearCart'))
   }
@@ -48,14 +48,20 @@ class App extends Component {
 
   render(){
     
-    // console.log(data)
+    // console.log( this.state.cart[0].name.name)
     return (
     <div className="App">
       <Header />
-      <Finder foodInCart = {this.foodInCart}/>
-      <Cart clearCart= {this.clearCart}/>
-      {/* <img src='https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg'></img> */}
+      {/* <Finder foodInCart = {this.foodInCart} 
+      clearCart= {this.clearCart} 
+      state={this.state.cart}/> */}
+      {/* <Cart clearCart= {this.clearCart} state={this.state.cart}/> */}
 
+      <Finder foodInCart = {this.foodInCart}/>
+      <Cart clearCart= {this.clearCart} state={this.state.cart}/>
+
+      {/* <img src='https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg'></img> */}
+      {/* {this.state.cart[0].name} */}
     </div>
   );
   }

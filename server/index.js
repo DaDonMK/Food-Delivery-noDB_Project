@@ -21,4 +21,4 @@ app.post('/api/cart', bc.create)
 app.put('/api/cart/:id', bc.update)
 app.delete('/api/cart/:id', bc.delete)
 
-app.listen(port, () => console.log('Server running on ' + port))
+app.listen(port, () => console.log('Server thriving on ' + port))

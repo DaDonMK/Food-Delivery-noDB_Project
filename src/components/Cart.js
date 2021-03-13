@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+// import CartDisplay from './CartDisplay'
 
 export default class Cart extends Component{
     constructor(){
@@ -18,19 +18,28 @@ export default class Cart extends Component{
 
     deleteIndex(){
         this.props.clearCart(this.state.input)
+        
     }
-    alerted(){
+    alerted(mappedDisplay){
         alert("FOOD is on its way! Be Ready!")
+        mappedDisplay = null
     }
-
 
     render(){
+        
+        let mappedDisplay = this.props.state.map((element, i) => {
+            return <p>{element.name.name} ${element.name.price}</p>
+            // return "hello"
+         })
+         console.log("Getting passed:" + this.props.state)
         return(
             <div className='Cart-section'>
                 <header>Cart</header>
                 <button onClick={this.alerted}>CheckOut</button>
-                <input type="numer" onChange={(event) => this.inputChange(event.target.value)}></input>
+                <input type="number" onChange={(event) => this.inputChange(event.target.value)}></input>
                 <button onClick={this.deleteIndex}>delete</button>
+                <p>{mappedDisplay}</p>
+                {/* <CartDisplay cart = {this.props.state}/> */}
             </div>
         )
     }

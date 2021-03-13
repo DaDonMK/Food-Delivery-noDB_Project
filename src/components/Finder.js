@@ -7,7 +7,8 @@ export  default class Finder extends Component{
         super(props)
 
         this.state = {
-            menu : []
+            menu : [],
+            count: 0
         }
          this.getMenu = this.getMenu.bind(this)
     }
@@ -29,7 +30,6 @@ export  default class Finder extends Component{
 
         console.log(this.state.menu)
         const mappedMenu = this.state.menu.map((element, i) => (
-
 
             <Display 
             key = {i}
