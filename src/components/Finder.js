@@ -21,6 +21,7 @@ export  default class Finder extends Component{
         axios.get('/api/foods')
         .then(res => {
             this.setState({menu: res.data})
+            // console.log('elements:' + res.data)
         })
         .catch(err => console.log(err +' in getMenu'))
     }
@@ -30,7 +31,6 @@ export  default class Finder extends Component{
 
         console.log(this.state.menu)
         const mappedMenu = this.state.menu.map((element, i) => (
-
             <Display 
             key = {i}
             element = {element}

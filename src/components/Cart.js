@@ -19,9 +19,9 @@ export default class Cart extends Component{
 
     deleteIndex(){
         this.props.clearCart(this.state.input)
-        let x = 5;
-        // this.props.state = [];
-        <CartDisplay erase = {x}/>
+        // let x = 5;
+        // // this.props.state = [];
+        // <CartDisplay erase = {x}/>
         
     }
     alerted(){

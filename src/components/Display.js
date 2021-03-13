@@ -16,11 +16,13 @@ export default class Display extends Component{
     }
     
     render(){
-        // <Cart clearCart= {this.props.clearCart} state={this.props.state}/>
+         console.log(this.props.element)
         return(
             <div className = "Display">
 
-                 <p>ITEM: {this.props.element.name} PRICE:${this.props.element.price}</p>
+                 <p1>ITEM: {this.props.element.name} PRICE:${this.props.element.price}</p1>
+                 <img src= {this.props.element.img} alt='food'></img>
+                 <br />
                  <button onClick={this.handleCart}>{this.props.element.name}</button>
                  
             </div>

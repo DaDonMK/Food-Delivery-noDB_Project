@@ -2,23 +2,28 @@
     {
         "id": 1,
         "name": "small burger",
-        "price": 3.00
+        "price": 3.00,
+        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
     },
     {
         "id": 2,
         "name": "medium burger",
-        "price": 4.20
+        "price": 4.25,
+        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
 
     },
     {
         "id": 3,
         "name": "large burger",
-        "price": 5.00
+        "price": 5.00,
+        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
+
     },
     {
         "id": 4,
         "name":"medium drink",
-        "price": 1.50
+        "price": 1.45,
+        "img":"https://kitchensanctuary.com/wp-content/uploads/2014/06/miniburgers-270a5730-june2014_web.jpg"
     },
     {
         "id": 5,
@@ -28,7 +33,7 @@
     {
         "id": 6,
         "name":"xl drink",
-        "price": 2.50
+        "price": 2.45
     },
     {
         "id": 7,
