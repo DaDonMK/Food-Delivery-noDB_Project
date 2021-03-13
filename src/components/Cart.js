@@ -25,7 +25,8 @@ export default class Cart extends Component{
         
     }
     alerted(){
-        alert("FOOD is on its way! Be Ready!");
+        let x = prompt("Enter your address:");
+        alert(`FOOD coming your WAY at "${x}"!`)
        
         // mappedDisplay = null
     }

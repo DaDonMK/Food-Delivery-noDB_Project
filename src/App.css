@@ -64,17 +64,23 @@ img{
   justify-content: center;
 }
 button{
-  height: 25px;
+  height: 20px;
 }
 #name-price{
   padding: 20px;
 }
 .Cart-section{
   display: flex;
-  height: 250px;
+  height: 100%;
+  width: 175px;
   flex-direction: column;
   padding: 10px;
   justify-content: space-between;
-
-  
+  border: 2px dotted black;
+  margin-top:20px;
+  /* background-color: rgb(210, 218, 220); */
+}
+#order-button{
+  margin-left:20px;
+  margin-top: 75px;
 }

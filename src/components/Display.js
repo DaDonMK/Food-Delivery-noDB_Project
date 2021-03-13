@@ -20,12 +20,12 @@ export default class Display extends Component{
         return(
             <div className = "Display">
 
-                 <p id="name-price">ITEM: {this.props.element.name} </p>
+                 <p id="name-price">{this.props.element.name} </p>
                  <br />
-                 <p id="name-price">PRICE: ${this.props.element.price}</p>
+                 <p id="name-price"> ${this.props.element.price}</p>
                  <img src= {this.props.element.img} alt='food'></img>
                  <br />
-                 <button onClick={this.handleCart}>{this.props.element.name}</button>
+                 <button id="order-button" onClick={this.handleCart}>{this.props.element.name}</button>
                  
             </div>
             
