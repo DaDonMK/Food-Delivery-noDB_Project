@@ -14,6 +14,7 @@ class App extends Component {
       cart: []
     }
     this.foodInCart = this.foodInCart.bind(this)
+    this.clearCart = this.clearCart.bind(this)
   }
 
   componentDidMount(){
