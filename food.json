@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "small burger",
+        "price": 3.00
+    },
+    {
+        "id": 2,
+        "name": "medium burger",
+        "price": 4.20
+
+    },
+    {
+        "id": 3,
+        "name": "large burger",
+        "price": 5.00
+    },
+    {
+        "id": 4,
+        "name":"medium drink",
+        "price": 1.50
+    },
+    {
+        "id": 5,
+        "name":"large drink",
+        "price": 2.00
+    },
+    {
+        "id": 6,
+        "name":"xl drink",
+        "price": 2.50
+    },
+    {
+        "id": 7,
+        "name":"small fries",
+        "price": 2.00
+    },
+    {
+        "id": 8,
+        "name":"medium fries",
+        "price": 3.00
+    },
+    {
+        "id": 9,
+        "name":"large fries",
+        "price": 4.00
+    }
+]

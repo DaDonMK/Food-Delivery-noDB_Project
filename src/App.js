@@ -1,25 +1,64 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {Component} from 'react'
+import axios from 'axios'
+import Header from './components/Header';
+import Cart from './components/Cart'
+import Finder from './components/Finder'
 
-function App() {
-  return (
+class App extends Component {
+  constructor(){
+    super()
+
+    this.state = {
+      cart : [],
+    }
+    this.foodInCart = this.foodInCart.bind(this)
+  }
+
+  componentDidMount(){
+    axios.get('/api/foods')
+    .then(response =>{
+      this.setState({cart: response.data})
+      // console.log(response)
+    })
+    .catch(err => console.log(err + ' inCart'))
+  }
+
+  foodInCart(sendElementToCart){
+    axios.post('/api/cart',{name: sendElementToCart})
+    .then(response =>{
+      // console.log(response.data)
+      this.setState({cart: response.data})
+      console.log(this.state.cart)
+      console.log(this.state.cart[1].name.price)
+
+    })
+    .catch(err => console.log(err + 'inSendToCart'))
+  }
+
+  clearCart(id) {
+    axios.delete(`/api/cart/${id}`)
+    .then(response =>{
+      this.setState({cart: response.data})
+      // console.log(this.state.cart)
+    })
+    .catch(err => console.log(err + ' inClearCart'))
+  }
+
+
+  render(){
+    
+    // console.log(data)
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Finder foodInCart = {this.foodInCart}/>
+      <Cart clearCart= {this.clearCart}/>
+      {/* <img src='https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg'></img> */}
+
     </div>
   );
+  }
 }
-
+  
 export default App;
