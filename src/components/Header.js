@@ -5,7 +5,7 @@ export default class Header extends Component{
     render(){
         return (
             <div>
-             <h1>30 Minutes or Less!</h1>
+             <h1>Order on the GO!</h1>
             </div>
         )
     }

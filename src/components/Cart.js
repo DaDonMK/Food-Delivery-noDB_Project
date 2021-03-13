@@ -10,6 +10,7 @@ export default class Cart extends Component{
         }
         this.inputChange = this.inputChange.bind(this)
         this.deleteIndex = this.deleteIndex.bind(this)
+        this.alerted = this.alerted.bind(this)
     }
 
     inputChange(val){
@@ -40,8 +41,8 @@ export default class Cart extends Component{
             <div className='Cart-section'>
                 <header>Cart</header>
                 <button onClick={this.alerted}>CheckOut</button>
-                <input type="number" onChange={(event) => this.inputChange(event.target.value)}></input>
-                <button onClick={this.deleteIndex}>delete</button>
+                <input type="number" placeholder= "Enter Item Number" onChange={(event) => this.inputChange(event.target.value)}></input>
+                <button onClick={this.deleteIndex}>Delete</button>
                 {/* <p>{mappedDisplay}</p> */}
                 <CartDisplay cart = {this.props.state}/>
             </div>
