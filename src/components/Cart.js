@@ -40,9 +40,9 @@ export default class Cart extends Component{
         return(
             <div className='Cart-section'>
                 <header>Cart</header>
-                <button onClick={this.alerted}>CheckOut</button>
                 <input type="number" placeholder= "Enter Item Number" onChange={(event) => this.inputChange(event.target.value)}></input>
                 <button onClick={this.deleteIndex}>Delete</button>
+                <button onClick={this.alerted}>CheckOut</button>
                 {/* <p>{mappedDisplay}</p> */}
                 <CartDisplay cart = {this.props.state}/>
             </div>

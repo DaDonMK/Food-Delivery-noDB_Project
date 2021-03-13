@@ -1,10 +1,15 @@
 .App {
+  display: flex;
+  flex-direction: row;
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  flex-wrap: wrap;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,7 +22,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -38,5 +43,38 @@
 }
 
 img{
-  width: 250px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header{
+  position: relative;
+  background-color: red;
+  height: 70px;
+  width: 100%;
+}
+.Display{
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+button{
+  height: 25px;
+}
+#name-price{
+  padding: 20px;
+}
+.Cart-section{
+  display: flex;
+  height: 250px;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+
+  
 }

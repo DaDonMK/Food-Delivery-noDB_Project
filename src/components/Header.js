@@ -4,7 +4,7 @@ export default class Header extends Component{
 
     render(){
         return (
-            <div>
+            <div className = "Header">
              <h1>Order on the GO!</h1>
             </div>
         )

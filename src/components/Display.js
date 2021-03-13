@@ -20,7 +20,9 @@ export default class Display extends Component{
         return(
             <div className = "Display">
 
-                 <p>ITEM: {this.props.element.name} PRICE: ${this.props.element.price}</p>
+                 <p id="name-price">ITEM: {this.props.element.name} </p>
+                 <br />
+                 <p id="name-price">PRICE: ${this.props.element.price}</p>
                  <img src= {this.props.element.img} alt='food'></img>
                  <br />
                  <button onClick={this.handleCart}>{this.props.element.name}</button>
