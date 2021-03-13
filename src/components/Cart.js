@@ -26,24 +26,19 @@ export default class Cart extends Component{
     }
     alerted(){
         let x = prompt("Enter your address:");
-        alert(`FOOD coming your WAY at "${x}"!`)
+        alert(`FOOD ON THE WAY TO: "${x}"`)
        
-        // mappedDisplay = null
     }
 
     render(){
         
-        // let mappedDisplay = this.props.state.map((element, i) => {
-        //     return <p>{element.name.name} ${element.name.price}</p>
-        //     // return "hello"
-        //  })
-        //  console.log("Getting passed:" + this.props.state)
+        
         return(
             <div className='Cart-section'>
-                <header>Cart</header>
+                <header id="cart-header">Cart</header>
                 <input type="number" placeholder= "Enter Item Number" onChange={(event) => this.inputChange(event.target.value)}></input>
-                <button onClick={this.deleteIndex}>Delete</button>
-                <button onClick={this.alerted}>CheckOut</button>
+                <button id="cart-btn" onClick={this.deleteIndex}>Delete</button>
+                <button id="cart-btn" onClick={this.alerted}>Check Out</button>
                 {/* <p>{mappedDisplay}</p> */}
                 <CartDisplay cart = {this.props.state}/>
             </div>
