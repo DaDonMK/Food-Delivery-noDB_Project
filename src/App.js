@@ -41,6 +41,7 @@ class App extends Component {
     axios.delete(`/api/cart/${id}`)
     .then(response =>{
       this.setState({cart: response.data})
+
       console.log(this.state.cart)
     })
     .catch(err => console.log(err + ' inClearCart'))

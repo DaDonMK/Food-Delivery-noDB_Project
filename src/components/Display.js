@@ -16,7 +16,7 @@ export default class Display extends Component{
     }
     
     render(){
-         console.log(this.props.element)
+        //  console.log(this.props.element)
         return(
             <div className = "Display">
 
