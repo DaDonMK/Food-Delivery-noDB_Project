@@ -9,12 +9,13 @@ module.exports = {
     },
     
     create: (req, res) => {
-        const {name} = req.body
         const {price} = req.body
+        const {quant} = req.body
         cart.push(
             {
                 id: id,
                 name: req.body.name,
+                quant: quant + 1,
                 price: price
             }
         )
@@ -24,21 +25,22 @@ module.exports = {
 
     update: (req, res) => {
         const {id} = req.params
-        const {name} = req.body
-        let price = 0
+        const {quant} = req.body
+        let upQuant = null
         let foodIndex = 0
         cart.map((element, index) => {
             if(element.id === +id){
                 foodIndex = index
-                price = index.price
+                upQuant = +quant + 1
             }
         })
         let updateName = {
             id: +id,
             name: req.body.name,
-            price: price
+            quant: upQuant,
+            price: req.body.price,
         }
-        cart.splice(foodIndex, 1, updateName)
+        cart.splice(foodIndex, 0, updateName)
         res.status(200).send(cart)
     },
     delete: (req, res) => {

@@ -15,6 +15,7 @@ class App extends Component {
     }
     this.foodInCart = this.foodInCart.bind(this)
     this.clearCart = this.clearCart.bind(this)
+    // this.updateCart = this.updateCart.bind(this)
   }
 
   componentDidMount(){
@@ -37,6 +38,15 @@ class App extends Component {
     .catch(err => console.log(err + 'inSendToCart'))
   }
 
+  // updateCart(id){
+  //   axios.put(`/api/cart/${id}`)
+  //   .then(res => {
+  //     this.setState({cart: res.data})
+  //     console.log(res.data)
+  //   })
+  //   .catch(err => console.log(err + ' in updateCart'))
+  // }
+
   clearCart(id) {
     axios.delete(`/api/cart/${id}`)
     .then(response =>{
@@ -53,7 +63,7 @@ class App extends Component {
     return (
     <div className="App">
       <Header />
-      <Finder foodInCart = {this.foodInCart}/>
+      <Finder foodInCart = {this.foodInCart} updateCart = {this.updateCart}/>
       <Cart clearCart= {this.clearCart} state={this.state.cart}/>
     </div>
   );

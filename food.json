@@ -2,18 +2,21 @@
     {
         "id": 1,
         "name": "BEYOND MEAT",
+        "quant": 0,
         "price": 6.45,
         "img":"https://www.thespruceeats.com/thmb/KAgMssHoQUmx30uuYL_FTahXA0A=/2048x1360/filters:fill(auto,1)/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg"
     },
     {
         "id": 2,
         "name": "3 OUNCE BURGER",
+        "quant": 0,
         "price": 4.25,
         "img":"https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg"
 
     },
     {
         "id": 3,
+        "quant": 0,
         "name": "5 OUNCE BURGER",
         "price": 5.99,
         "img":"https://media-cdn.tripadvisor.com/media/photo-s/11/77/d2/17/big-big-burger.jpg"

@@ -35,6 +35,7 @@ export  default class Finder extends Component{
             key = {i}
             element = {element}
             foodInCart = {this.props.foodInCart}
+            updateCart = {this.props.updateCart}
             // Menu = {this.props.getMenu}
             />
             

@@ -7,12 +7,22 @@ export default class Display extends Component{
 
         let sendElementToCart = {
             name: element.name,
-            price: element.price
+            price: element.price,
+            quant: element.quant
         }
+
+        // let elementQuant = {
+        //     quant: element.quant
+        // }
        
         this.props.foodInCart(sendElementToCart)
+
         // this.props.Menu()
         
+    }
+    incQuant = () => {
+        const {element} = this.props
+        this.props.updateCart(element.id)
     }
     
     render(){
@@ -26,6 +36,7 @@ export default class Display extends Component{
                  <img src= {this.props.element.img} alt='food'></img>
                  <br />
                  <button id="order-button" onClick={this.handleCart}>{this.props.element.name}</button>
+                 <button onClick={this.incQuant}>Increment Quantity</button>
                  
             </div>
             

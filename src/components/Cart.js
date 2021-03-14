@@ -25,7 +25,7 @@ export default class Cart extends Component{
         this.props.clearCart(this.state.input);
         let minusVal =  this.props.state[y-1].name.price
         this.setState({minus: minusVal})
-        
+        this.setState({input: ''})
         // return (this.state.minus)
         // this.setState({minus: this.})
         // <CartDisplay minus={y} />
@@ -46,7 +46,7 @@ export default class Cart extends Component{
         return(
             <div className='Cart-section'>
                 <header id="cart-header">Cart</header>
-                <input type="number" placeholder= "Enter Item Number" onChange={(event) => this.inputChange(event.target.value)}></input>
+                <input value={this.state.input}  placeholder= "Enter Item Number" onChange={(event) => this.inputChange(event.target.value)}></input>
                 <button id="cart-btn" onClick={this.deleteIndex}>Delete</button>
                 <button id="cart-btn" onClick={this.alerted}>Check Out</button>
                 {/* <p>{mappedDisplay}</p> */}
