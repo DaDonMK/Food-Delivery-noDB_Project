@@ -56,12 +56,16 @@ img{
 }
 .Display{
   /* background-color: green; */
+  padding: 5px;
   display: flex;
   flex-direction: row;
   /* justify-content: space-evenly; */
   flex-wrap: wrap;
   margin-top: 30px;
   justify-content: center;
+  /* -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.64); 
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.64); */
+border: 5px dotted rgb(126, 2, 126);
 }
 button{
   height: 20px;
@@ -76,8 +80,10 @@ button{
   flex-direction: column;
   padding: 10px;
   justify-content: space-between;
-  border: 2px dotted black;
+  border: 1px solid black;
   margin-top:20px;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.83); 
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.83);
   /* background-color: rgb(210, 218, 220); */
 }
 #order-button{
