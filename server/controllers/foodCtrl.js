@@ -1,4 +1,3 @@
-// import * as foods from '.../food.json'
 const cart = []
 let id = 1
 

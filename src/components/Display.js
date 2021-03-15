@@ -36,7 +36,7 @@ export default class Display extends Component{
                  <img src= {this.props.element.img} alt='food'></img>
                  <br />
                  <button id="order-button" onClick={this.handleCart}>{this.props.element.name}</button>
-                 <button onClick={this.incQuant}>Increment Quantity</button>
+                 {/* <button onClick={this.incQuant}>Increment Quantity</button> */}
                  
             </div>
             

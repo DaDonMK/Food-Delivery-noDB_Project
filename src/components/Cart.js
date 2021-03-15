@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import CartDisplay from './CartDisplay'
-import Header from './Header'
 
 
 export default class Cart extends Component{
@@ -9,7 +8,7 @@ export default class Cart extends Component{
 
         this.state ={
             input: '',
-            minus : 0
+            minus : null
         }
         this.inputChange = this.inputChange.bind(this)
         this.deleteIndex = this.deleteIndex.bind(this)
@@ -22,9 +21,20 @@ export default class Cart extends Component{
 
     deleteIndex=() => {
         let y = (this.state.input);
+        let popFromPriceArr = y - 1
+        // let minusVal = 0
+        this.setState({minus: popFromPriceArr})
         this.props.clearCart(this.state.input);
-        let minusVal =  this.props.state[y-1].name.price
-        this.setState({minus: minusVal})
+        // console.log(this.props.state[y-1])
+        // if(this.props.state.length <= 1){
+        //      minusVal =  this.props.state[y-1].name.price
+        //     this.setState({minus: minusVal})
+
+        // }else{
+        //     this.setState({minus: 10})
+        // }
+
+
         // this.setState({input: ''})
         // return (this.state.minus)
         // this.setState({minus: this.})
